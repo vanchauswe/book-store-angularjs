@@ -8,8 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <script src="controller/app.controller.js"></script>
     <link rel="stylesheet" type="text/css" href="global.styles.css" />
+    <link rel="stylesheet" type="text/css" href="define.styles.css" />
 </head>
-<body ng-app="BookStoreApp">
+<body ng-app="BookStoreApp" ng-controller="BookStoreController">
     <div class="header-container flex-between">
         <a href="/" class="">
             <div class="logo-container flex-start">
@@ -38,6 +39,27 @@
             <img alt="Shopping" src="./assets/icons/shopping-icon.svg" class="shopping-icon" />
         </div>
     </div>
-    
+
+    <div class="image-container">
+        <div class="banner-container flex-center">
+            <div class="relative">
+                <button class="left-image__btn flex-center absolute">
+                    <img alt="Left Btn" class="left-image__icon" src="./assets/icons/left-btn.svg" />
+                </button>
+                <img alt="Main Banner" src="./assets/images/main-banner-1.jpg" class="main-banner" />
+                <button class="right-image__btn flex-center absolute">
+                    <img alt="Right Btn" class="right-image__icon" src="./assets/icons/right-btn.svg" />
+                </button>
+                <div class="image-thumbnails absolute">
+                    <div class="thumbnail" ng-class="{ active: isSelected($index) }" ng-repeat="image in images track by $index" ng-click="selectImage($index)"></div>
+                </div>
+            </div>
+            <div class="sub-container">
+                <img alt="Sub Banner" src="./assets/images/sub-banner-1.jpg" class="sub-banner1" />
+                <img alt="Sub Banner" src="./assets/images/sub-banner-2.jpg" class="sub-banner2" />
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

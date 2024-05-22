@@ -2,56 +2,6 @@ body {
     margin: 0 0;
 }
 
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.flex-start {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.flex-end {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.flex-row {
-    flex-direction: row;
-    align-items: center;
-}
-
-.text-white {
-    color: white;
-}
-
-.text-black {
-    color: black;
-}
-
-.medium-text {
-    font: 600;
-    font-size: large;
-}
-
-
-
-
-
-
-
-
-
 .header-container {
     height: 4rem;
     background-color: rgb(0, 0, 255, 0.6);
@@ -103,7 +53,7 @@ body {
     border-radius: 10px;
     background-color: white;
     padding: 0 1rem;
-    margin: 0 4rem;
+    margin: 0 2rem;
 }
 
 .search-input {
@@ -127,5 +77,88 @@ body {
 
 .search-icon {
     height: 2rem;
+}
 
+.image-container {
+    margin-top: 4rem;
+}
+
+.banner-container {
+
+}
+
+.main-banner {
+    max-width: 48rem;
+    margin-right: 2rem;
+}
+
+.sub-container {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-banner1 {
+    margin-bottom: 1rem;
+}
+
+.sub-banner2 {
+    margin-top: 1rem;
+}
+
+.left-image__btn,
+.right-image__btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    
+    &:hover {
+        background-color:aquamarine
+    }
+}
+
+.left-image__icon,
+.right-image__icon {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+
+    &:hover {
+        background-color:aquamarine
+    }
+}
+
+.left-image__btn {
+    left: -1rem;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.right-image__btn {
+    right: 1rem;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.image-thumbnails {
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnail {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.thumbnail.active {
+    background-color: #bb6f6f;
 }
