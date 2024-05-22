@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="controller/app.controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="global.styles.css" />
+</head>
+<body ng-app="BookStoreApp">
+    <div class="header-container flex-between">
+        <a href="/" class="">
+            <div class="logo-container flex-start">
+                <img alt="Logo" src="./assets/images/logo.png" class="logo-icon" />
+                <p class="text-white medium-text">Book Shop</p>
+            </div>
+        </a>
+        <div class="location-container flex-center">
+            <img alt="Location" src="./assets/icons/location-icon.svg" class="location-icon" />
+            <p class="text-white">TP.HCM</p>
+        </div>
+        <div class="search-container flex-between">
+            <input class="search-input" placeholder="Enter book name you want to search" ng-model="searchValue" />
+            <button class="search-btn">
+                <img alt="Search Btn" class="search-icon" src="/assets/icons/search-icon.svg" />
+            </button>
+        </div>
+        <div class="language-container flex-center">
+            <img alt="Language" src="./assets/icons/language-icon.svg" class="language-icon" />
+            <p class="text-white">English</p>
+        </div>
+        <div class="user-container flex-center">
+            <img alt="User" src="./assets/icons/user-icon.svg" class="user-icon" />
+        </div>
+        <div class="shopping-container flex-center">
+            <img alt="Shopping" src="./assets/icons/shopping-icon.svg" class="shopping-icon" />
+        </div>
+    </div>
+    
+</body>
+</html>
