@@ -42,24 +42,103 @@
 
     <div class="image-container">
         <div class="banner-container flex-center">
-            <div class="relative">
-                <button class="left-image__btn flex-center absolute">
+            <div class="main-banner__container relative">
+                <button ng-click="changeImage(-1)" class="left-image__btn flex-center absolute">
                     <img alt="Left Btn" class="left-image__icon" src="./assets/icons/left-btn.svg" />
                 </button>
-                <img alt="Main Banner" src="./assets/images/main-banner-1.jpg" class="main-banner" />
-                <button class="right-image__btn flex-center absolute">
+                <img alt="Main Banner" ng-src="{{ mainImage }}" class="main-banner" ng-class="{ 'slide-left': slideLeft, 'slide-right': slideRight }" />
+                <button ng-click="changeImage(1)" class="right-image__btn flex-center absolute">
                     <img alt="Right Btn" class="right-image__icon" src="./assets/icons/right-btn.svg" />
                 </button>
                 <div class="image-thumbnails absolute">
-                    <div class="thumbnail" ng-class="{ active: isSelected($index) }" ng-repeat="image in images track by $index" ng-click="selectImage($index)"></div>
+                    <div class="thumbnail" ng-class="{ active: isSelected($index) }" ng-repeat="image in images track by $index" ng-click="changeImage(null, $index)"></div>
                 </div>
             </div>
-            <div class="sub-container">
+            <div class="sub-container__container">
                 <img alt="Sub Banner" src="./assets/images/sub-banner-1.jpg" class="sub-banner1" />
                 <img alt="Sub Banner" src="./assets/images/sub-banner-2.jpg" class="sub-banner2" />
             </div>
-
         </div>
+        <div class="sub-container flex-center">
+            <img alt="Sub Banner" src="./assets/images/sub-banner-3.jpg" class="sub-banner" />
+            <img alt="Sub Banner" src="./assets/images/sub-banner-4.jpg" class="sub-banner" />
+            <img alt="Sub Banner" src="./assets/images/sub-banner-5.jpg" class="sub-banner" />
+            <img alt="Sub Banner" src="./assets/images/sub-banner-6.jpg" class="sub-banner" />
+        </div>
+    </div>
+
+    <div class="menu-container flex-center">
+        <div class="menu-container-1 flex-center">
+            <div class="menu-item" ng-repeat="menuIcon in menuIcons track by menuIcon.id">
+                <img alt="Menu Icon" class="menu-item__img" ng-src="{{ menuIcon.icon }}" />
+                <p class="menu-item__title">{{ menuIcon.title }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashsale-container">
+        <div class="flex-center">
+            <div class="flashsale-menu flex-between">
+                <div class="flex-start">
+                    <img src="./assets/icons/label-flashsale.svg" class="flashsale-icon" alt="Flash Sale Icon" />
+                    <div class="flashsale-content flex-center">
+                        <p class="flashsale-title">
+                            KẾT THÚC TRONG:
+                        </p>
+                        <div class="time-countdown text-white flex-center">
+                            {{ days }}
+                        </div>
+                        <div class="flashsale-title">
+                            :
+                        </div>
+                        <div class="time-countdown text-white flex-center">
+                            {{ hours }}
+                        </div>
+                        <div class="flashsale-title">
+                            :
+                        </div>
+                        <div class="time-countdown text-white flex-center">
+                            {{ minutes }}
+                        </div>
+                        <div class="flashsale-title">
+                            :
+                        </div>
+                        <div class="time-countdown text-white flex-center">
+                            {{ seconds }}
+                        </div>
+                    </div>
+                </div>
+                <div class="flashsale-seemore">
+                    Xem thêm
+                </div>
+            </div>
+        </div>
+        <div class="flashsale-body flex-center relative">
+            <button ng-click="changeBook(false)" class="left-image__btn left-image__btn2 flex-center absolute">
+                <img alt="Left Btn" class="left-image__icon" src="./assets/icons/left-btn.svg" />
+            </button>
+            <div class="flashsale-book" ng-repeat="book in currentBooks track by $index">
+                <img alt="Book Image" class="book-img" ng-src="{{ book.img }}" />
+                <div class="book-name__container flex-start">
+                    <div class="name-content">{{ book.title }}</div>
+                </div>
+                <div class="book-author__container flex-start">
+                    <div class="author-title">Tác giả: </div>
+                    <div class="author-content">{{ book.author }}</div>
+                </div>
+                <div class="book-price__container flex-start">
+                    <div class="price-title">Giá tiền: </div>
+                    <div class="price-content">{{ formatPrice(book.price) }}</div>
+                </div>
+            </div>
+            <button ng-click="changeBook(true)" class="right-image__btn right-image__btn2 flex-center absolute">
+                <img alt="Right Btn" class="right-image__icon" src="./assets/icons/right-btn.svg" />
+            </button>
+        </div>
+    </div>
+
+    <div class="shopping-trend">
+        
     </div>
 </body>
 </html>
