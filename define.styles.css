@@ -40,6 +40,11 @@
     font-size: large;
 }
 
+.large-text {
+    font: bolder;
+    font-size: xx-large;
+}
+
 .relative {
     position: relative;
 }

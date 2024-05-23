@@ -3,6 +3,14 @@ body {
     margin: 0 0;
 }
 
+p {
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        color: blue;
+    }
+}
+
 .header-container {
     height: 4rem;
     background-color: rgb(0, 0, 255, 0.6);
@@ -316,6 +324,175 @@ body {
     right: 10rem;
 }
 
-.shopping-trend {
+.shoppingtrend-container {
+    width: 100%;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.shoppingtrend-header {
+    width: 82%;
+    height: 4rem;
+    background-color: rgb(255, 192, 203, 0.3);
+    padding-left: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.shoppingtrend-title {
+    padding-left: 1rem;
+}
+
+.shoppingtrend-body {
+    width: 83%;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    border-radius: 10px;
+}
+
+.shoppingtrend-book {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: aquamarine;
+    }
+}
+
+.more-shoppingtrend {
+    width: 100%;
+}
+
+.more-shopingtrend__btn {
+    width: 12rem;
+    height: 3rem;
+    background-color:rgb(255, 0, 0, 0.9);
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+        background-color:rgb(255, 0, 0);
+    }
+}
+
+.brand-container {
+    
+}
+
+.brand-body {
+    width: 82%;
+}
+
+.brand-img {
+
+}
+
+.footer-container {
     margin-top: 2rem;
+    flex-direction: column;
+}
+
+.footer-header {
+    background-color: rgb(187, 111, 111, 0.9);
+    width: 83%;
+    padding: 0.5rem 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.email-icon {
+    width: 2.5rem;
+    padding-right: 1rem;
+}
+
+.footer-header__content {
+    margin-right: 8rem;
+}
+
+.footer-header__email {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.footer-header__input {
+    border: none;
+    outline: none;
+    min-width: 24rem;
+}
+
+.footer-header__btn {
+    width: 6rem;
+    height: 2rem;
+    font-weight: 800;
+    background-color: rgb(0, 128, 0, 0.9);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(0, 128, 0);
+    }
+}
+
+.footer-body {
+    width: 83%;
+    min-height: 36rem;
+    padding: 0 1rem;
+}
+
+.logo-icon-footer {
+    width: 8rem;
+}
+
+.footer-body1 {
+    width: 40%;
+}
+
+.footer-address {
+    padding-left: 2rem;
+}
+
+.footer-body1-img {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    height: 2rem;
+}
+
+.contact-icon {
+    width: 3rem;
+    margin: 1rem 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.separator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-color: #000;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.footer-body2 {
+    margin-left: 2rem;
+}
+
+.sub1-footer-body2__col {
+    margin-right: 4rem;
 }

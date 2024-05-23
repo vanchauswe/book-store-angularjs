@@ -177,6 +177,69 @@ angular.module('BookStoreApp', []).controller("BookStoreController", function ($
         },
     ]
 
+    $scope.brands = [
+        {
+            img: './assets/images/brands/brand1.png',
+        },
+        {
+            img: './assets/images/brands/brand2.png',
+        },
+        {
+            img: './assets/images/brands/brand3.png',
+        },
+        {
+            img: './assets/images/brands/brand4.png',
+        },
+        {
+            img: './assets/images/brands/brand5.png',
+        },
+        {
+            img: './assets/images/brands/brand6.png',
+        },
+        {
+            img: './assets/images/brands/brand7.png',
+        },
+        {
+            img: './assets/images/brands/brand8.png',
+        },
+        {
+            img: './assets/images/brands/brand9.png',
+        },
+        {
+            img: './assets/images/brands/brand10.png',
+        },
+        {
+            img: './assets/images/brands/brand11.png',
+        },
+        {
+            img: './assets/images/brands/brand12.png',
+        },
+        {
+            img: './assets/images/brands/brand13.png',
+        },
+    ]
+
+    $scope.contacts = [
+        {
+            img: './assets/icons/291720_social media_media_facebook_logo_internet_icon.svg',
+        },
+        {
+            img: './assets/icons/294709_circle_twitter_icon.svg',
+        },
+        {
+            img: './assets/icons/317714_video_youtube_icon.svg',
+        },
+        {
+            img: './assets/icons/335921_printerest_social media_square_photosharing_red_icon.png',
+        },
+        {
+            img: './assets/icons/335934_linkedin_social_social media_square_employee_icon.png',
+        },
+        {
+            img: './assets/icons/3225191_app_instagram_logo_media_popular_icon.svg',
+        },
+    ]
+
     $scope.mainImage = $scope.images[$scope.selectedImageIndex];
 
     $scope.formatPrice = function(price) {
@@ -211,7 +274,6 @@ angular.module('BookStoreApp', []).controller("BookStoreController", function ($
             $scope.currentBooks = $scope.books.slice($scope.displayValueBookSale * ($scope.currentIndexBookSale - 1), $scope.displayValueBookSale * $scope.currentIndexBookSale);
             $scope.currentIndexBookSale -= 1;
         }
-        console.log('heheheehe',!isIncrease && $scope.currentIndexBookSale - 1 > 0, isIncrease);
     };
 
     var intervalPromise;
