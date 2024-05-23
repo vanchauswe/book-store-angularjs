@@ -1,0 +1,54 @@
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.flex-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.medium-text {
+    font: 600;
+    font-size: large;
+}
+
+.large-text {
+    font: bolder;
+    font-size: xx-large;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
